@@ -55,12 +55,12 @@ const Dashboard = () => {
         const outcome = await result.json()
      
         setData(outcome)
-
+   
         setTotalPages(Math.ceil(data.length/10)) 
-        
+     
     }
 
-
+ 
     const editHandler = (id)=>{
         setEdit(id)
         setEditTog(true)
@@ -145,7 +145,7 @@ const Dashboard = () => {
                      <div className='d-flex justify-content-evenly'>
                          <div className='w-100 d-flex flex-md-row flex-column gap-2'>
                         
-                            <input type="search" className="form-control" id="example" placeholder="Search" onKeyUp={(e)=> keyHandler(e)  } onChange={(e)=>setSearching(e.target.value)} />
+                            <input type="search" className="form-control" id="example" placeholder={`search by ${filterProperty}`} onKeyUp={(e)=> keyHandler(e)  } onChange={(e)=>setSearching(e.target.value)} />
           
                             <select className="form-select"  id="custom-select" onChange={(e)=>setFilterProperty(e.target.value)}>
                               <option value="select property" disabled>select property</option>
@@ -159,7 +159,7 @@ const Dashboard = () => {
                                               <div class="modal-dialog modal-dialog-centered">
                                                 <div class="modal-content">
                                                   <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update Data</h1>
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">All Delete Data</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                   </div>
                                                   <div class="modal-body">
